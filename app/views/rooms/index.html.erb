@@ -1,0 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<h1>Номера в гостинице</h1>
+
+<%= form_tag(rooms_path, method: :get) do %>
+  <p> Поиск номер по типу</p>
+  <%= text_field_tag(:search, params[:search], placeholder: 'Поиск...')%>
+  <%= submit_tag ("Поиск") %>
+<% end %>
+
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Номер:</th>
+      <th scope="col"><%= link_to "Тип:",:sort=>"Тип:"%></th>
+      <th scope="col"><%= link_to "Цена:",:sort=>"Цена:"%></th>
+      <th scope="col">Описание:</th>
+    </tr>
+  </thead>
+
+  
+  <div id="rooms">
+
+    <% a = []%>
+    <% @friends.each do |friend|%>
+      <%a.push(friend.room_id)%>
+    <% end %>
+    <% @rooms.each do |room| %>
+      <%if a.include?(room.id)%>
+      <% else %>
+        <tbody>
+          <tr>
+            <td><%= room.id %></td>
+            <td><%= room.tip %></td>
+            <td><%= room.price %> руб./сутки</td>
+            <td><%=link_to "Описание", room, class:"badge badge-info" %> </td>
+          </tr>
+        </tbody>
+      <% end %>
+    <% end %>
+  </table>
+</div>
+
+

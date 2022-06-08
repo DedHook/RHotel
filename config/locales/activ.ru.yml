@@ -1,0 +1,23 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "пароли не совпадают"
+            password:
+              too_short: "пароль слишком короткий"
+              blank: "поле не заполненно"
+            email:
+              blank: "поле не заполненно"
+        friend:
+          attributes:
+            first_name:
+              blank: "Не запонено поле имя"
+            last_name:
+              blank: "Не запонено поле фамилия"
+            phone:
+              invalid: "Некоректный ввод телефона"
+            end_date:
+              greater_than: "2 дата меньше 1 даты" 
