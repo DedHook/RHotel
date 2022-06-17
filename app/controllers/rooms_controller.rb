@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :set_room, only: %i[ show edit update destroy ]
   # GET /rooms or /rooms.json
   def index
-    @friends = Friend.all
+    @bookings = Booking.all
     if params[:search]
       search_room
     elsif params[:sort] != "Цена:"

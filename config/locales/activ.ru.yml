@@ -11,7 +11,7 @@ ru:
               blank: "поле не заполненно"
             email:
               blank: "поле не заполненно"
-        friend:
+        booking: 
           attributes:
             first_name:
               blank: "Не запонено поле имя"
@@ -20,4 +20,8 @@ ru:
             phone:
               invalid: "Некоректный ввод телефона"
             end_date:
-              greater_than: "2 дата меньше 1 даты" 
+              greater_than: "2 дата меньше 1 даты"
+            start_date:
+              blank: "не заполено поле 1 даты"
+            end_date:
+              blank: "не заполено поле 2 даты"

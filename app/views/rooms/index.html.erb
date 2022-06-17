@@ -26,13 +26,8 @@
   
   <div id="rooms">
 
-    <% a = []%>
-    <% @friends.each do |friend|%>
-      <%a.push(friend.room_id)%>
-    <% end %>
+
     <% @rooms.each do |room| %>
-      <%if a.include?(room.id)%>
-      <% else %>
         <tbody>
           <tr>
             <td><%= room.id %></td>
@@ -41,7 +36,6 @@
             <td><%=link_to "Описание", room, class:"badge badge-info" %> </td>
           </tr>
         </tbody>
-      <% end %>
     <% end %>
   </table>
 </div>

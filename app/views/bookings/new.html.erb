@@ -1,0 +1,34 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<div class="container">
+
+  <div class="card bg-light" >
+    <div>
+Этот номер забронирован 
+<br>
+ <% @bookings.each do |booking| %>
+  <%if $q1 == booking.room_id%>
+  С  <%= booking.start_date%> По <%=booking.end_date%>
+    <br>
+    <%end%>
+<%end%>
+<br> 
+</div>
+  <article class="card-body mx-auto" style="max-width: 400px;">
+  
+	<h4 class="card-title mt-3 text-center">Бронирование</h4>
+
+
+<%= render "form", booking: @booking %>
+
+<br>
+
+<div>
+  <%= link_to "Назад", bookings_path,class:"btn btn-primary btn-sm" %>
+</div>
+</article>
+</div>
+</div>
