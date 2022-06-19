@@ -161,6 +161,7 @@ GEM
       railties (>= 3.1)
     msgpack (1.4.2)
     multi_json (1.15.0)
+    mysql2 (0.5.3)
     nested_form (0.3.2)
     net-imap (0.2.3)
       digest
@@ -300,6 +301,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   momentjs-rails
+  mysql2
   pg
   puma (~> 5.0)
   rails (~> 7.0.1)

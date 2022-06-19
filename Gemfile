@@ -11,7 +11,7 @@ gem "sprockets-rails"
 
 
 # Use mysql db
-# gem 'mysql2'
+gem 'mysql2'
 gem 'pg'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
