@@ -1,5 +1,5 @@
 default: &default
- url: <%= ENV['postgres://dtavmbwajdmdwx:457a7785bc353906f068952ef27722b7ac34c2d97b7ed2af6309b1cb6cd262d9@ec2-52-206-182-219.compute-1.amazonaws.com:5432/d6muvdgpt4eihg'] %>
+ url: <%= ENV['postgres://tkxefivoxjcjzu:30b4c4b918092ae07789a1da646dfc2b20d592e50c1fc4cf40edfe97331af465@ec2-23-23-182-238.compute-1.amazonaws.com:5432/d16k2q6fl8qqo0'] %>
 development:
   <<: *default
 
