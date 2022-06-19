@@ -1,23 +1,15 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 5
-  timeout: 5000
-  username: DedDb
-  password: 123
-  socket: /var/run/mysqld/mysqld.sock
+ url: <%= ENV['postgres://dtavmbwajdmdwx:457a7785bc353906f068952ef27722b7ac34c2d97b7ed2af6309b1cb6cd262d9@ec2-52-206-182-219.compute-1.amazonaws.com:5432/d6muvdgpt4eihg'] %>
 development:
   <<: *default
-  database: HotelDb
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: HotelTest
+
 
 production:
   <<: *default
-  database: HotelProd
