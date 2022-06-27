@@ -6,17 +6,9 @@
 <div class="container">
 
   <div class="card bg-light" >
-    <div>
-Этот номер забронирован 
-<br>
- <% @bookings.each do |booking| %>
-  <%if $q1 == booking.room_id%>
-  С  <%= booking.start_date%> По <%=booking.end_date%>
-    <br>
-    <%end%>
-<%end%>
-<br> 
-</div>
+
+<%= render "bs" %>
+
   <article class="card-body mx-auto" style="max-width: 400px;">
   
 	<h4 class="card-title mt-3 text-center">Бронирование</h4>

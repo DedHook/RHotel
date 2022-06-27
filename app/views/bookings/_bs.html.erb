@@ -1,0 +1,11 @@
+ <div>
+Этот номер забронирован 
+<br>
+ <% Booking.all.each do |booking| %>
+  <%if $q1 == booking.room_id%>
+  С  <%= booking.start_date%> По <%=booking.end_date%>
+    <br>
+    <%end%>
+<%end%>
+<br> 
+</div> 

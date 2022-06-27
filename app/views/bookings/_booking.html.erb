@@ -22,7 +22,7 @@
 
   <p>
     <strong>Электронная почта:</strong>
-    <%= booking.email %>
+    <%= current_user.email %>
   </p>
 
   <p>
@@ -33,6 +33,13 @@
   <p>
     <strong>Номер:</strong>
     <%= booking.room_id %>
+  </p>
+  <p>
+    <strong>Дата брони:</strong>
+     <%= booking.start_date %> -
+    <%= booking.end_date %> 
+   
+
   </p>
 </div>
 </div>

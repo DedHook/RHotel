@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
-    
     @bookings = Booking.all
     @booking = current_user.booking.build
     @rooms = Room.all
@@ -26,18 +25,10 @@ class BookingsController < ApplicationController
       if booking.room_id == $q1
         startDate.push(booking.start_date)
         endDate.push(booking.end_date)
-      end
-     
-      gon.end_date = endDate;
-        gon.start_date = startDate;
-        
-        
-      
-    
+      end 
+    gon.end_date = endDate;
+    gon.start_date = startDate;
     end
- 
-   
-
     @rooms.each do |room|
       if room.id == $q1
         gon.we = room.price
@@ -54,6 +45,8 @@ class BookingsController < ApplicationController
   def create
     # @booking = Booking.new(booking_params)
     @booking = current_user.booking.build(booking_params)
+
+
     respond_to do |format|
       if @booking.save
         format.html { redirect_to booking_url(@booking), notice: "Забронировано." }

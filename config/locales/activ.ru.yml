@@ -14,14 +14,18 @@ ru:
         booking: 
           attributes:
             first_name:
-              blank: "Не запонено поле имя"
-            last_name:
-              blank: "Не запонено поле фамилия"
+              blank: "Не заполнено поле имя"
+            last_name: 
+              blank: "Не заполнено поле фамилия"
             phone:
-              invalid: "Некоректный ввод телефона"
+              invalid: "Некорректный ввод телефона"
             end_date:
               greater_than: "2 дата меньше 1 даты"
             start_date:
-              blank: "не заполено поле 1 даты"
+              blank: "Не заполнено поле 1 даты"
             end_date:
-              blank: "не заполено поле 2 даты"
+              blank: "Не заполнено поле 2 даты"
+            user_id:
+              taken: "У вас уже есть бронь"  
+            :phone:
+              taken: "Данный телефон уже забронирован"
